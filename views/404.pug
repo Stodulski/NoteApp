@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/reset.css")
+        link(rel="stylesheet" href="/css/navbar.css")
+        link(rel="stylesheet" href="/css/footer.css")
+        link(rel="stylesheet" href="/css/404.css")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+        title Notes - 404
+    body
+        include partials/navbar.pug
+        section(class="error")
+            img(src="/assets/404.svg" alt="404" class="error__img")
+            a(href="/" class="error__redirect") 
+                span(class="error__title") go back
+        include partials/footer.pug    
+        script(src="/js/jquery.js")
+        script(src="/js/navbar.js")

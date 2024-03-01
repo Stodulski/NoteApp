@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/reset.css")
+        link(rel="stylesheet" href="css/navbar.css")
+        link(rel="stylesheet" href="css/footer.css")
+        link(rel="stylesheet" href="css/home.css")
+        link(rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon")
+        title Notes - Home
+    body 
+        include partials/navbar.pug
+        section(class="note__container")
+            div(class="note")
+                a(href="/note/new")
+                    button(class="note__button") Create note
+
+            each note in notes
+                div(class="note" id=note._id)
+                    span(class="note__title" title=note.title)=note.title
+                    p(class="note__text")=note.note
+                    div(class="note__change")
+                        img(src="/assets/edit.svg" alt="Edit note" class="note__edit")
+                        img(src="/assets/delete.svg" alt="Delete note" class="note__delete")
+
+        include partials/footer.pug            
+        script(src="/js/jquery.js")
+        script(src="/js/navbar.js") 
+        script(src="/js/home.js") 

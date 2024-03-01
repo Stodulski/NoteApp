@@ -1,0 +1,118 @@
+@import url(./font.css);
+
+body {
+    background-color: #e8e8e8;
+}
+.note__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2vh;
+    font-family: "Nanum Gothic", sans-serif;
+    min-height: 82.5vh;
+}
+.note {
+    margin-bottom: 12.5vh;
+    width: 100%;
+}
+.note__title {
+    display: block;
+    margin-bottom: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    font-size: 5vmin;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+.note__text {
+    margin-bottom: 1vh;
+    padding: 0 1vh 0 1vh;
+    font-size: 5vmin;
+    word-wrap: break-word;
+    white-space: initial;
+    line-height: 25px;
+}
+.note__change {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.note__edit {
+    width: 11.5vmin;
+    cursor: pointer;
+    margin-right: 1vh;
+}
+.note__delete {
+    width: 10vmin;
+    cursor: pointer;
+    margin-right: 1vh;
+}
+.note__button {
+    width: 45vmin;
+    height: 15vmin;
+    background-color: #469c86;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 4vmin;
+    color: #fff;
+}
+.note__button:hover {
+    background-color: rgb(71, 181, 153);
+}
+.note:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 15vh;
+    width: 100%;
+}
+
+@media (orientation: landscape) {
+    .note__container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .note {
+        width: 26%;
+        height: auto;
+        margin-bottom: 7.5vh;
+        background-color: #fff;
+        padding: 1.25vh;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+    .note:first-child {
+        width: 25%;
+        height: auto;
+        background-color: unset;
+        box-shadow: none;
+    }
+    .note__title {
+        font-size: 2.75vmin;
+        margin: 1vh;
+    }
+    .note__text {
+        margin: 2vh 1vh;
+        font-size: 2.25vmin;
+    }
+    .note__edit {
+        width: 6.5vmin;
+    }
+    .note__delete {
+        width: 6vmin;
+    }
+    .note__button {
+        font-size: 3vmin;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+}

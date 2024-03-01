@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head  
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css/reset.css")
+        link(rel="stylesheet" href="css/form.css")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+        title Notes - Sign In / Sign Up
+    body
+        div(class="form")
+            form(class="form__container" id="signInForm")
+                h2(class="form__title" id="signInTitle") Sign In
+                input(type="text" class="form__input" placeholder="Username" name="username" id="usernameSignIn")
+                input(type="password" class="form__input" placeholder="Password" name="password" id="passwordSignIn")
+                input(type="submit" class="form__input form__input--submit" value="Send" id="submitSignIn") 
+                span(class="form__change" id="signInSelector") Don't have account? Sign Up
+            form(class="form__container" id="signUpForm")
+                h2(class="form__title" id="signUpTitle") Sign Up
+                input(type="text" class="form__input" placeholder="Username" name="username" id="usernameSignUp")
+                input(type="password" class="form__input" placeholder="Password" name="password" id="passwordSignUp")
+                input(type="password" class="form__input" placeholder="Confirm password" name="repassword" id="rePasswordSignUp")
+                input(type="submit" class="form__input form__input--submit" value="Send" id="submitSignUp") 
+                span(class="form__change" id="signUpSelector") Already have account? Sign in
+        script(src="/js/jquery.js")
+        script(src="/js/form.js")  
+
+

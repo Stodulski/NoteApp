@@ -1,0 +1,38 @@
+@import url(./font.css);
+
+body{
+    background-color: #e8e8e8;
+}
+.error{
+    height: 82.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Nanum Gothic", sans-serif;
+}
+.error__img{
+    width: 45vmin;
+    transform: translateY(-10vmin);
+}
+.error__redirect{
+    color: #469c86;
+    transform: translateY(-5vmin);
+}
+.error__redirect:hover{
+    color:rgb(71, 181, 153);
+}
+.error__title{
+    font-weight: bolder;
+    font-size: 5vmin;
+}
+@media (orientation: portrait){
+    .error__title{
+        font-size: 10vmin;
+    }
+    .error__img{
+        width: 55vmin;
+        transform: translateY(-20vmin);
+    }
+}

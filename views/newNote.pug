@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="/css/reset.css")
+        link(rel="stylesheet" href="/css/navbar.css")
+        link(rel="stylesheet" href="/css/footer.css")
+        link(rel="stylesheet" href="/css/noteForm.css")
+        link(rel="shortcut icon", href="/assets/favicon.ico", type="image/x-icon")
+        title Notes - New note
+    body
+        include partials/navbar.pug
+        section(class="form")
+            form(class="form__container" id="noteForm")
+                h2(class="form__title" id="formTitle") New note
+                input(type="text" class="form__input" placeholder="Title" name="Title" id="noteTitle")
+                textarea(class="form__input" placeholder="Note" name="Description" id="noteDesc")
+                input(type="submit" class="form__input form__input--submit" value="Create" id="submitNote") 
+        include partials/footer.pug    
+        script(src="/js/jquery.js")
+        script(src="/js/navbar.js")
+        script(src="/js/newNote.js")
