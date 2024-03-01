@@ -5,7 +5,8 @@
   "description": "A simple note (CRUD) app",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch ./server/app.js"
+    "dev": "node --watch ./server/app.js",
+    "start": "node ./server/app.js"
   },
   "author": "",
   "license": "ISC",
